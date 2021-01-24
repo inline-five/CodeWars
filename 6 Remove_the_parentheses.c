@@ -30,6 +30,8 @@ void remove_parentheses(const char *str_in, char *str_out) {
 }
 
 /*
+https://www.codewars.com/kata/5f7c38eb54307c002a2b8cc8
+
 Remove the parentheses
 In this kata you are given a string for example:
 
