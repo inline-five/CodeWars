@@ -1,3 +1,16 @@
+def order_weight(strng):
+    weights = strng.split()
+    sort_by = []
+
+    for each in weights:
+        digits = [int(x) for x in str(each)]
+        sort_by.append(sum(digits))
+        
+    zipped_weights = sorted(zip(sort_by, weights))
+    
+    sort_by = [x[1] for x in zipped_weights]
+    return " ".join(sort_by)
+
 '''
 My friend John and I are members of the "Fat to Fit Club (FFC)". John is worried because each month a 
 list with the weights of members is published and each month he is the last on the list which means 
@@ -29,16 +42,3 @@ it may happen that the input string have leading, trailing whitespaces and more 
 whitespace between two consecutive numbers
 For C: The result is freed.
 '''
-
-def order_weight(strng):
-    weights = strng.split()
-    sort_by = []
-
-    for each in weights:
-        digits = [int(x) for x in str(each)]
-        sort_by.append(sum(digits))
-        
-    zipped_weights = sorted(zip(sort_by, weights))
-    
-    sort_by = [x[1] for x in zipped_weights]
-    return " ".join(sort_by)
